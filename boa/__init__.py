@@ -7,6 +7,8 @@ all_cap_re = re.compile(r'([a-z0-9])([A-Z])')
 dedupe_re = re.compile(r'\_+')
 
 def constrict(string):
+    """Convert the input string to snakecase + lowercase."""
+
     # Whitespace to underscores
     output = spaces_re.sub('_', string)
 
