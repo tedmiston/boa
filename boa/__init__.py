@@ -8,15 +8,16 @@ dedupe_re = re.compile('\_+')
 
 def constrict(string):
     # Title case before removing spaces, to preserve words
-    capped = title_re.sub(lambda m: m.group(1) + m.group(2).upper(), string)
+    output = title_re.sub(lambda m: m.group(1) + m.group(2).upper(), string)
 
     # Strip non-alphanumeric/underscore chars
-    stripped = strip_re.sub('', capped)
+    output = strip_re.sub('', output)
 
     # Snake case
-    snake1 = first_cap_re.sub(r'\1_\2', stripped)
-    snake2 = all_cap_re.sub(r'\1_\2', snake1).lower()
+    output = first_cap_re.sub(r'\1_\2', output)
+    output = all_cap_re.sub(r'\1_\2', output).lower()
 
     # Remove multiple sequential underscores
-    deduped = dedupe_re.sub('_', snake2)
-    return deduped
+    output = dedupe_re.sub('_', output)
+
+    return output
