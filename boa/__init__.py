@@ -1,10 +1,10 @@
 import re
 
 title_re = re.compile('(^|\s)(\S)')
-strip_re = re.compile('[^\w]+')
-first_cap_re = re.compile('(.)([A-Z][a-z]+)')
-all_cap_re = re.compile('([a-z0-9])([A-Z])')
-dedupe_re = re.compile('\_+')
+strip_re = re.compile(r'[^\w]+')
+first_cap_re = re.compile(r'(.)([A-Z][a-z]+)')
+all_cap_re = re.compile(r'([a-z0-9])([A-Z])')
+dedupe_re = re.compile(r'\_+')
 
 def constrict(string):
     # Title case before removing spaces, to preserve words
