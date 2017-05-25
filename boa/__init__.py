@@ -1,14 +1,14 @@
 import re
 
-title_re = re.compile('(^|\s)(\S)')
+spaces_re = re.compile(r'\s+')
 strip_re = re.compile(r'[^\w]+')
 first_cap_re = re.compile(r'(.)([A-Z][a-z]+)')
 all_cap_re = re.compile(r'([a-z0-9])([A-Z])')
 dedupe_re = re.compile(r'\_+')
 
 def constrict(string):
-    # Title case before removing spaces, to preserve words
-    output = title_re.sub(lambda m: m.group(1) + m.group(2).upper(), string)
+    # Whitespace to underscores
+    output = spaces_re.sub('_', string)
 
     # Strip non-alphanumeric/underscore chars
     output = strip_re.sub('', output)
