@@ -7,7 +7,7 @@ first_cap_re = re.compile('(.)([A-Z][a-z]+)')
 all_cap_re = re.compile('([a-z0-9])([A-Z])')
 dedupe_re = re.compile('\_+')
 
-def snakecase(string):
+def constrict(string):
     # Title case before removing spaces, to preserve words
     capped = title_re.sub(lambda m: m.group(1) + m.group(2).upper(), string)
 
