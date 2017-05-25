@@ -27,7 +27,3 @@ def test_lower_first_letter():
 def test_underscored():
     snake = boa.constrict('context_ip')
     assert snake == 'context_ip'
-
-def test_colons():
-    snake = boa.constrict('analytics:byway')
-    assert snake == 'analytics_byway'
