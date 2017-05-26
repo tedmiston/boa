@@ -8,14 +8,10 @@ We use it to translate user-defined event names into names we can use for databa
 
 ## Installation
 
-Install `boa` in your virtual environment:
+Install in your virtual environment:
 
 ```bash
-pip install boa
-```
-
-```bash
-pip install -e ...  # TODO
+pip install boa-str
 ```
 
 ## Quickstart
