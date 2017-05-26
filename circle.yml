@@ -7,5 +7,10 @@ dependencies:
     - pip install -r requirements-test.txt
 
 test:
+  pre:
+    - mkdir tmp
   override:
-    - nose2
+    - nose2 --plugin nose2.plugins.junitxml --junit-xml
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/nose2
+    - mv tmp/nose2-junit.xml $CIRCLE_TEST_REPORTS/nose2
