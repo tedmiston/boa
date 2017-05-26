@@ -1,7 +1,7 @@
 from setuptools import find_packages, setup
 
 setup(
-    name='boa',
+    name='boa-str',
     version='1.0.0',
     description='Convert strings to snakecase',
     long_description=(
