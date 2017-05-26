@@ -11,7 +11,7 @@ We use it to translate user-defined event names into names we can use for databa
 Install in your virtual environment:
 
 ```bash
-pip install boa-str
+$ pip install boa-str
 ```
 
 ## Quickstart
@@ -30,19 +30,19 @@ We use [nose2][nose2-pypi] and [coverage][coverage-pypi] for unit tests.
 First install test requirements:
 
 ```bash
-pip install -r requirements-test.txt
+$ pip install -r requirements-dev.txt
 ```
 
 Then run:
 
 ```bash
-nose2
+$ invoke test
 ```
 
 ## Lint
 
 ```bash
-pycodestyle .
+$ invoke lint
 ```
 
 🐍️🐍️🐍️
