@@ -1,3 +1,7 @@
+"""
+Convert strings to snakecase.
+"""
+
 import re
 
 spaces_re = re.compile(r'\s+')
