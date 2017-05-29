@@ -10,13 +10,19 @@ def lint(ctx):
     ctx.run('pycodestyle .')
 
 @task
-def release(ctx):
+def release(ctx, upload=False, cleanup=True):
     """Generate a distribution release and upload to PyPI."""
     ctx.run('python setup.py check')
     ctx.run('python setup.py sdist')
     ctx.run('python setup.py bdist_wheel --universal')
-    ctx.run('twine upload dist/*')
-    # TODO: clean up build, dist, etc
+
+    if upload:
+        ctx.run('twine upload dist/*')
+
+    if cleanup:
+        ctx.run('python setup.py clean --all')
+        ctx.run('rm -fR boa_str.egg-info/')
+        ctx.run('rm -fR dist/')
 
 @task
 def test(ctx):
