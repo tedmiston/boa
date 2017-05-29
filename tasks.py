@@ -2,11 +2,13 @@ from invoke import task
 
 @task
 def clean(ctx):
-    # TODO: implement clear **/*.pyc and __pycache__ files
-    pass
+    """Clear bytecode and cache files."""
+    ctx.run('find . -name \*.pyc -delete')
+    ctx.run('find . -name __pycache__ -delete')
 
 @task
 def lint(ctx):
+    """Check style."""
     ctx.run('pycodestyle .')
 
 @task
