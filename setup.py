@@ -1,15 +1,19 @@
+import os
 from setuptools import find_packages, setup
+
+
+def read(filename):
+    """Load the contents of a file."""
+    root_dir = os.path.dirname(__file__)
+    filepath = os.path.join(root_dir, filename)
+    return open(filepath).read()
+
 
 setup(
     name='boa-str',
     version='1.0.1',
     description='Convert strings to snakecase',
-    long_description=(
-        'Boa is a Python package for constricting strings to a specific '
-        'snakecase format.\n\nWe use it to translate user-defined event names '
-        'into names we can use for database tables and in S3 file names. For '
-        'example, "User Buys Item" becomes "user_buys_item".'
-    ),
+    long_description=read('README.md'),
     url='https://github.com/astronomerio/boa',
     author='Taylor Edmiston',
     author_email='taylor@astronomer.io',
