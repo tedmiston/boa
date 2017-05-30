@@ -11,6 +11,7 @@ test:
     - mkdir tmp
   override:
     - nose2 --plugin nose2.plugins.junitxml --junit-xml
+    - python -m doctest -v README.md
   post:
     - mkdir -p $CIRCLE_TEST_REPORTS/nose2
     - mv tmp/nose2-junit.xml $CIRCLE_TEST_REPORTS/nose2

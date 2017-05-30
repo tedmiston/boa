@@ -21,6 +21,7 @@ $ pip install boa-str
 >>> my_str = 'Hello Boa'
 >>> boa.constrict(my_str)
 'hello_boa'
+
 ```
 
 ## Tests
