@@ -29,7 +29,8 @@ setup(
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
     ],
-    keywords='boa snakecase snake_case snake case inflector astronomer astronomerio',
+    keywords=('boa snakecase snake_case snake case inflector astronomer '
+              'astronomerio'),
     packages=find_packages(exclude=['tests']),
     install_requires=[],
 )
