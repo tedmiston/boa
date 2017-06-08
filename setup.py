@@ -19,7 +19,7 @@ setup(
     author_email='taylor@astronomer.io',
     maintainer='Astronomer',
     maintainer_email='taylor@astronomer.io',
-    license='MIT',
+    license='MIT License',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
