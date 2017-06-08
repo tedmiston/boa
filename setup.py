@@ -15,8 +15,10 @@ setup(
     description='Convert strings to snakecase',
     long_description=read('README.md'),
     url='https://github.com/astronomerio/boa',
-    author='Taylor Edmiston',
+    author='Astronomer',
     author_email='taylor@astronomer.io',
+    maintainer='Astronomer',
+    maintainer_email='taylor@astronomer.io',
     license='MIT',
     classifiers=[
         'Development Status :: 4 - Beta',
