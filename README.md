@@ -1,6 +1,6 @@
 # Boa
 
-[![PyPI](https://img.shields.io/pypi/v/boa-str.svg)](https://pypi.python.org/pypi/boa-str) [![CircleCI](https://circleci.com/gh/astronomerio/boa.svg?style=svg)](https://circleci.com/gh/astronomerio/boa)
+[![PyPI](https://img.shields.io/pypi/v/boa-str.svg)](https://pypi.python.org/pypi/boa-str) [![CircleCI](https://img.shields.io/circleci/project/github/astronomerio/boa.svg)](https://circleci.com/gh/astronomerio/boa)
 
 Boa is a Python package for converting strings to snakecase.
 
