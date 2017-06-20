@@ -13,6 +13,9 @@ dedupe_re = re.compile(r'\_+')
 def constrict(string):
     """Convert the input string to snakecase + lowercase."""
 
+    if string is None:
+        return ''
+
     # Whitespace to underscores
     output = spaces_re.sub('_', string)
 

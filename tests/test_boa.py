@@ -1,10 +1,7 @@
-import unittest
-
 from nose2.tools import params
 
 import boa
 
-@unittest.skip('not handled yet')
 def test_null():
     output = boa.constrict(None)
     assert output == ''
