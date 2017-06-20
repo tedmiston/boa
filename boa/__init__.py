@@ -4,7 +4,7 @@ Convert strings to snakecase.
 
 import re
 
-spaces_re = re.compile(r'\s+')
+spaces_re = re.compile(r'[\s\-]+')
 strip_re = re.compile(r'[^\w]+')
 first_cap_re = re.compile(r'(.)([A-Z][a-z]+)')
 all_cap_re = re.compile(r'([a-z0-9])([A-Z])')

@@ -31,12 +31,14 @@ def test_camelcased(string):
     assert output == 'some_event'
 
 @params(
-    ('Some "Events"',),
-    ('Some Event\'s',),
+    ('Some "Events"', 'some_events'),
+    ('Some Event\'s', 'some_events'),
+    ('Some-Events', 'some_events'),
+    ('Some-Big-Events', 'some_big_events'),
 )
-def test_special_chars(string):
+def test_special_chars(string, expected):
     output = boa.constrict(string)
-    assert output == 'some_events'
+    assert output == expected
 
 @params(
     ('INFO WINDOW',),
