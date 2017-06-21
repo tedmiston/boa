@@ -2,9 +2,11 @@
 
 [![PyPI](https://img.shields.io/pypi/v/boa-str.svg)](https://pypi.python.org/pypi/boa-str) [![CircleCI](https://img.shields.io/circleci/project/github/astronomerio/boa.svg)](https://circleci.com/gh/astronomerio/boa) [![codecov](https://codecov.io/gh/astronomerio/boa/branch/master/graph/badge.svg)](https://codecov.io/gh/astronomerio/boa)
 
-Boa is a Python package for converting strings to snakecase.
+Boa is a Python package for normalizing and converting strings to snakecase.
 
-For example, it translates the user-defined event `'User Buys Item'` to `'user_buys_item'` which can then be used in an S3 file path or database table name.
+For example, it translates the user-defined event `'User Buys Item'` to `'user_buys_item'` which can then be used in a file path in S3, or as the name of a schema or table in Redshift.
+
+It also handles the more complex cases such as stripping punctuation and converting words from camelCase or PascalCase to snake_case (see examples below).
 
 ## Installation
 
@@ -21,6 +23,19 @@ $ pip install boa-str
 >>> my_str = 'Hello Boa'
 >>> boa.constrict(my_str)
 'hello_boa'
+
+```
+
+## Examples
+
+```python
+>>> import boa
+
+>>> boa.constrict('toInfinityAndBeyond')
+'to_infinity_and_beyond'
+
+>>> boa.constrict('Welcome-to-planet-Earth!')
+'welcome_to_planet_earth'
 
 ```
 
