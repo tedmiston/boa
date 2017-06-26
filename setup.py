@@ -22,7 +22,7 @@ setup(
     name='boa-str',
     version='1.0.1',
     description='Convert strings to snakecase',
-    long_description=read('README.md'),
+    long_description=read('README.rst'),
     url='https://github.com/astronomerio/boa',
     author='Astronomer',
     author_email='taylor@astronomer.io',
