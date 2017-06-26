@@ -43,10 +43,10 @@ $ pip install boa-str
 
 We use [nose2][nose2-pypi] and [coverage][coverage-pypi] for unit tests.
 
-First install test requirements:
+Install with test requirements:
 
 ```bash
-$ pip install -r requirements-dev.txt
+$ pip install boa-str[test]
 ```
 
 Then run:
@@ -59,6 +59,14 @@ $ invoke test
 
 ```bash
 $ invoke lint
+```
+
+## Dev
+
+Install with dev requirements (includes test requirements):
+
+```bash
+$ pip install boa-str[dev]
 ```
 
 🐍️🐍️🐍️

@@ -1,6 +1,0 @@
--r requirements-test.txt
-
-invoke
-flake8
-pycodestyle
-twine

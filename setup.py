@@ -9,6 +9,15 @@ def read(filename):
     return open(filepath).read()
 
 
+test_requirements = ['codecov', 'cov-core', 'nose2']
+
+dev_requirements = [*test_requirements, 'flake8', 'pycodestyle', 'twine']
+
+extras = {
+    'dev': dev_requirements,
+    'test': test_requirements,
+}
+
 setup(
     name='boa-str',
     version='1.0.1',
@@ -35,4 +44,5 @@ setup(
               'astronomerio'),
     packages=find_packages(exclude=['tests']),
     install_requires=[],
+    extras_require=extras,
 )

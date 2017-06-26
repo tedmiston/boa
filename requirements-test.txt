@@ -1,3 +1,0 @@
-codecov
-cov-core
-nose2
