@@ -29,5 +29,4 @@ def release(ctx, upload=False, cleanup=True):
 @task
 def test(ctx):
     """Run unit tests and coverage."""
-    ctx.run('nose2')
-    ctx.run('python -m doctest -v README.rst')
+    ctx.run('nose2 tests')

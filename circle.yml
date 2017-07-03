@@ -6,8 +6,7 @@ test:
   pre:
     - mkdir tmp
   override:
-    - nose2 --plugin nose2.plugins.junitxml --junit-xml
-    - python -m doctest -v README.rst
+    - nose2 --plugin nose2.plugins.junitxml --junit-xml tests
   post:
     - codecov
     - mkdir -p $CIRCLE_TEST_REPORTS/nose2
