@@ -29,7 +29,7 @@ extras = {
 
 setup(
     name='boa-str',
-    version='1.0.1',
+    version='1.1.0',
     description='Convert strings to snakecase',
     long_description=read('README.rst'),
     url='https://github.com/astronomerio/boa',
