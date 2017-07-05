@@ -9,8 +9,18 @@ def read(filename):
     return open(filepath).read()
 
 
-test_requirements = ['codecov', 'cov-core', 'nose2']
-dev_requirements = test_requirements + ['flake8', 'invoke', 'pycodestyle', 'twine']
+test_requirements = [
+    'codecov',
+    'cov-core',
+    'nose2',
+]
+
+dev_requirements = test_requirements + [
+    'flake8',
+    'invoke',
+    'pycodestyle',
+    'twine',
+]
 
 extras = {
     'dev': dev_requirements,
