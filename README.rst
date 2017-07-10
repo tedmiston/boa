@@ -66,15 +66,15 @@ Then run:
 
     $ invoke test
 
-Lint
-----
+Style
+-----
 
 .. code-block:: console
 
     $ invoke lint
 
-Dev
----
+Contribute
+----------
 
 Clone the repo, then install with dev requirements which also includes test requirements:
 
