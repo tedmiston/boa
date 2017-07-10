@@ -76,10 +76,12 @@ Lint
 Dev
 ---
 
-Install with dev requirements (includes test requirements):
+Clone the repo, then install with dev requirements which also includes test requirements:
 
 .. code-block:: console
 
-    $ pip install boa-str[dev]
+    $ git clone https://github.com/astronomerio/boa/
+    $ cd boa
+    $ pip install .[dev]
 
 🐍️🐍️🐍️
