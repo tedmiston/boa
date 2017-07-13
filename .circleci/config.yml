@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3
+    working_directory: ~/boa
+    steps:
+      - checkout
+      - restore_cache:
+          key: deps-{{ .Branch }}-{{ checksum "setup.py" }}
+      - run:
+          name: Install boa
+          command: |
+            python -m venv venv
+            source venv/bin/activate
+            pip install -e .[test]
+      - save_cache:
+          key: deps-{{ .Branch }}-{{ checksum "setup.py" }}
+          paths:
+            - venv
+      - run:
+          name: Create dir for coverage report
+          command: mkdir nose2
+      - run:
+          name: Run unit tests
+          command: |
+            source venv/bin/activate
+            nose2 --plugin nose2.plugins.junitxml --junit-xml tests
+      - run:
+          name: Post to Codecov
+          command: |
+            source venv/bin/activate
+            codecov
+      - store_test_results:
+          path: nose2
