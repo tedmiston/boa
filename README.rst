@@ -66,6 +66,42 @@ Then run:
 
     $ invoke test
 
+CircleCI
+--------
+
+CircleCI will automatically run on the server, and with the 2.0 API can now also be run locally (using Docker) to check config or run unit tests.
+
+Setup
+~~~~~
+
+Install the `CircleCI CLI <https://circleci.com/docs/2.0/local-jobs/>`_ as described in their documentation.
+
+*Note: While the CircleCI docs claim that working_directory cannot be a relative path for local builds, it works fine for me. If you experience an issue with this, try changing it to an absolute path instead.*
+
+Validate
+~~~~~~~~
+
+To validate the config:
+
+.. code-block:: console
+
+    $ circleci config validate
+
+Build
+~~~~~
+
+To run the build:
+
+.. code-block:: console
+
+    $ circleci build \
+    -e CIRCLE_PROJECT_USERNAME=astronomerio \
+    -e CIRCLE_PROJECT_REPONAME=boa
+
+You need to provide these additional environment variables when running locally that get populated automatically on the server.
+
+*Note: Due to a limitation in CircleCI, it's expected to see an error for skipping uploading test results when running locally. It's currently not possible to configure built-in commands to not run locally.*
+
 Style
 -----
 
