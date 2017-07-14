@@ -12,12 +12,12 @@ def read(filename):
 test_requirements = [
     'codecov',
     'cov-core',
+    'invoke',
     'nose2',
 ]
 
 dev_requirements = test_requirements + [
     'flake8',
-    'invoke',
     'pycodestyle',
     'twine',
 ]

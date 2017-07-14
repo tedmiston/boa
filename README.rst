@@ -52,13 +52,22 @@ Examples
 Tests
 -----
 
+You can either install boa in a virtual environment or alternatively run the dockerized CircleCI build locally (skip to the CircleCI section after you clone).
+
 We use `nose2 <https://pypi.python.org/pypi/nose2>`_ and `coverage <https://pypi.python.org/pypi/coverage>`_ for unit tests.
+
+Clone:
+
+.. code-block:: console
+
+    $ git clone https://github.com/astronomerio/boa/
+    $ cd boa
 
 Install with test requirements:
 
 .. code-block:: console
 
-    $ pip install boa-str[test]
+    $ pip install .[test]
 
 Then run:
 
