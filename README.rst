@@ -39,6 +39,7 @@ Quickstart
     'hello_boa'
 
 Invalid characters will be stripped by default. This can be changed by setting the `sep` parameter.
+
 .. code-block:: python
 
     >>> my_str = 'no*Separator'
