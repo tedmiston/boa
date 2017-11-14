@@ -38,6 +38,18 @@ Quickstart
     >>> boa.constrict(my_str)
     'hello_boa'
 
+Invalid characters will be stripped by default. This can be changed by setting the `sep` parameter.
+.. code-block:: python
+
+    >>> my_str = 'no*Separator'
+    >>> boa.constrict(my_str)
+    'noseparator'
+
+    >>> my_str = 'with*A*Separator'
+    >>> boa.constrict(my_str, sep='_')
+    'with_a_separator'
+
+
 Examples
 --------
 

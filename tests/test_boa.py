@@ -67,3 +67,34 @@ def test_lower_first_letter():
 def test_underscored():
     output = boa.constrict('context_ip')
     assert output == 'context_ip'
+
+@params(
+    ('invalid~char'),
+    ('invalid`char'),
+    ('invalid!char'),
+    ('invalid@char'),
+    ('invalid#char'),
+    ('invalid$char'),
+    ('invalid%char'),
+    ('invalid^char'),
+    ('invalid*char'),
+    ('invalid(char'),
+    ('invalid)char'),
+    ('invalid+char'),
+    ('invalid=char'),
+    ('invalid[char'),
+    ('invalid]char'),
+    ('invalid{char'),
+    ('invalid}char'),
+    ('invalid|char'),
+    ('invalid\char'),
+    ('invalid/char'),
+    ('invalid<char'),
+    ('invalid>char'),
+    ('invalid?char'),
+    ('invalid.char')
+)
+
+def test_invalid(string):
+    output = boa.constrict(string, sep='_')
+    assert output == 'invalid_char'

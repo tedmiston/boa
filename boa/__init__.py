@@ -10,7 +10,7 @@ first_cap_re = re.compile(r'(.)([A-Z][a-z]+)')
 all_cap_re = re.compile(r'([a-z0-9])([A-Z])')
 dedupe_re = re.compile(r'\_+')
 
-def constrict(string):
+def constrict(string, sep=''):
     """Convert the input string to snakecase + lowercase."""
 
     if string is None:
@@ -20,7 +20,7 @@ def constrict(string):
     output = spaces_re.sub('_', string)
 
     # Strip non-alphanumeric/underscore chars
-    output = strip_re.sub('', output)
+    output = strip_re.sub(sep, output)
 
     # Snake case
     output = first_cap_re.sub(r'\1_\2', output)
