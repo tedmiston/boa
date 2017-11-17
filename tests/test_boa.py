@@ -96,5 +96,5 @@ def test_underscored():
 )
 
 def test_invalid(string):
-    output = boa.constrict(string, sep='_')
+    output = boa.constrict(string, repl='_')
     assert output == 'invalid_char'
