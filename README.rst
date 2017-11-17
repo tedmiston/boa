@@ -38,7 +38,7 @@ Quickstart
     >>> boa.constrict(my_str)
     'hello_boa'
 
-Invalid characters will be stripped by default. This can be changed by setting the `sep` parameter.
+You can also override the default behavior of stripping non-alphanumeric characters by providing a replacement character:
 
 .. code-block:: python
 
@@ -48,7 +48,6 @@ Invalid characters will be stripped by default. This can be changed by setting t
     >>> my_str = 'with*a*separator'
     >>> boa.constrict(my_str, sep='_')
     'with_a_separator'
-
 
 Examples
 --------
