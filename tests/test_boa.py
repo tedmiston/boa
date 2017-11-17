@@ -68,6 +68,10 @@ def test_underscored():
     output = boa.constrict('context_ip')
     assert output == 'context_ip'
 
+def test_custom_replacement_arg():
+    output = boa.constrict('invalid char', '_')
+    assert output == 'invalid_char'
+
 @params(
     ('invalid~char'),
     ('invalid`char'),
