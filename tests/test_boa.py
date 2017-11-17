@@ -1,3 +1,5 @@
+import string
+
 from nose2.tools import params
 
 import boa
@@ -73,32 +75,8 @@ def test_custom_replacement_arg():
     assert output == 'invalid_char'
 
 @params(
-    ('invalid~char'),
-    ('invalid`char'),
-    ('invalid!char'),
-    ('invalid@char'),
-    ('invalid#char'),
-    ('invalid$char'),
-    ('invalid%char'),
-    ('invalid^char'),
-    ('invalid*char'),
-    ('invalid(char'),
-    ('invalid)char'),
-    ('invalid+char'),
-    ('invalid=char'),
-    ('invalid[char'),
-    ('invalid]char'),
-    ('invalid{char'),
-    ('invalid}char'),
-    ('invalid|char'),
-    ('invalid\char'),
-    ('invalid/char'),
-    ('invalid<char'),
-    ('invalid>char'),
-    ('invalid?char'),
-    ('invalid.char')
+    *[f'invalid{c}char' for c in string.punctuation],
 )
-
 def test_custom_replacement_kwarg(string):
     output = boa.constrict(string, repl='_')
     assert output == 'invalid_char'
