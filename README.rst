@@ -38,6 +38,20 @@ Quickstart
     >>> boa.constrict(my_str)
     'hello_boa'
 
+You can also override the default behavior of stripping non-alphanumeric characters by providing a replacement character:
+
+.. code-block:: python
+
+    >>> import boa
+    >>> my_str = 'no*separator'
+    >>> boa.constrict(my_str)
+    'noseparator'
+    >>> my_str = 'with*a*separator'
+    >>> boa.constrict(my_str, '_')
+    'with_a_separator'
+    >>> boa.constrict(my_str, repl='_')
+    'with_a_separator'
+
 Examples
 --------
 

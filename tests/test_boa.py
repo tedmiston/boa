@@ -1,3 +1,5 @@
+import string
+
 from nose2.tools import params
 
 import boa
@@ -67,3 +69,14 @@ def test_lower_first_letter():
 def test_underscored():
     output = boa.constrict('context_ip')
     assert output == 'context_ip'
+
+def test_custom_replacement_arg():
+    output = boa.constrict('invalid char', '_')
+    assert output == 'invalid_char'
+
+@params(
+    *[f'invalid{c}char' for c in string.punctuation],
+)
+def test_custom_replacement_kwarg(string):
+    output = boa.constrict(string, repl='_')
+    assert output == 'invalid_char'
