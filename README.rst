@@ -42,11 +42,14 @@ You can also override the default behavior of stripping non-alphanumeric charact
 
 .. code-block:: python
 
+    >>> import boa
     >>> my_str = 'no*separator'
     >>> boa.constrict(my_str)
     'noseparator'
     >>> my_str = 'with*a*separator'
-    >>> boa.constrict(my_str, sep='_')
+    >>> boa.constrict(my_str, '_')
+    'with_a_separator'
+    >>> boa.constrict(my_str, repl='_')
     'with_a_separator'
 
 Examples
