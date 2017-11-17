@@ -99,6 +99,6 @@ def test_custom_replacement_arg():
     ('invalid.char')
 )
 
-def test_invalid(string):
+def test_custom_replacement_kwarg(string):
     output = boa.constrict(string, repl='_')
     assert output == 'invalid_char'
