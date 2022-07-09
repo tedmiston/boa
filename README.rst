@@ -74,7 +74,7 @@ Clone:
 
 .. code-block:: console
 
-    $ git clone https://github.com/astronomerio/boa/
+    $ git clone https://github.com/tedmiston/boa/
     $ cd boa
 
 Install with test requirements:
@@ -139,7 +139,7 @@ Clone the repo, then install with dev requirements which also includes test requ
 
 .. code-block:: console
 
-    $ git clone https://github.com/astronomerio/boa/
+    $ git clone https://github.com/tedmiston/boa/
     $ cd boa
     $ pip install .[dev]
 
