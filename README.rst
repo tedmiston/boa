@@ -118,7 +118,7 @@ To run the build:
 .. code-block:: console
 
     $ circleci build \
-    -e CIRCLE_PROJECT_USERNAME=astronomerio \
+    -e CIRCLE_PROJECT_USERNAME=tedmiston \
     -e CIRCLE_PROJECT_REPONAME=boa
 
 You need to provide these additional environment variables when running locally that get populated automatically on the server.
