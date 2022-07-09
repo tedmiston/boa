@@ -5,12 +5,12 @@ Boa
     :target: https://pypi.python.org/pypi/boa-str
     :alt: PyPI
 
-.. image:: https://img.shields.io/circleci/project/github/astronomerio/boa.svg
-    :target: https://circleci.com/gh/astronomerio/boa
+.. image:: https://img.shields.io/circleci/project/github/tedmiston/boa.svg
+    :target: https://circleci.com/gh/tedmiston/boa
     :alt: CircleCI
 
-.. image:: https://codecov.io/gh/astronomerio/boa/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/astronomerio/boa
+.. image:: https://codecov.io/gh/tedmiston/boa/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/tedmiston/boa
     :alt: Codecov
 
 Boa is a Python package for normalizing and converting strings to snakecase.
